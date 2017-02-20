@@ -63,7 +63,7 @@
 "בובספוג: הסרט": {"thumb": "https://image.tmdb.org/t/p/original/h0gjp7VfKHgEVSLLfTehP5tS40c.jpg", "video_id": "9vEc6961", "fanart": "https://image.tmdb.org/t/p/original/w1Jx8SFwxwMLSya3WyqPvZ0P3uH.jpg"},
 "בית": {"thumb": "https://image.tmdb.org/t/p/original/nnbe1eofIVa4RMmPgi9jnChSxJG.jpg", "video_id": "yA1k7Ijm", "fanart": "https://image.tmdb.org/t/p/original/oHigkkalwUD3VbFVzrlzY3dmcQy.jpg"},
 "גולשים על הירח": {"thumb": "https://image.tmdb.org/t/p/original/tLbs1K6smKKPg5BKRyEBfeNHq8h.jpg", "video_id": "Tc5xjpm4", "fanart": "https://image.tmdb.org/t/p/original/9fh9kS2GrJg8YV34nId4MCha5Ye.jpg"},
-"אחי הדוב": {"thumb": "https://image.tmdb.org/t/p/original/yswErHk6tq7jn70Fr0pk7Hv1HJZ.jpg", "video_id": "esXyH2bV", "fanart": "https://image.tmdb.org/t/p/original/fAzT4AboZXP2Sj3zE2HcQ7qjMi.jpg"},
+"אחי הדוב": {"thumb": "https://image.tmdb.org/t/p/original/yswErHk6tq7jn70Fr0pk7Hv1HJZ.jpg", "video_id": "Cz4zqrbe", "fanart": "https://image.tmdb.org/t/p/original/fAzT4AboZXP2Sj3zE2HcQ7qjMi.jpg"},
 "בובספוג מכנס מרובע: הסרט": {"thumb": "https://image.tmdb.org/t/p/original/qKp61LpqLb0we2DXDfivRdJ9ZbV.jpg", "video_id": "ZMLEc6QT", "fanart": "https://image.tmdb.org/t/p/original/1WNayre36yQ2ZBNXzXksQotoK25.jpg"},
 "המומינים בריביירה": {"thumb": "https://image.tmdb.org/t/p/original/g32aawKf4kEScSKcDQiBTL3aftJ.jpg", "video_id": "kkDIPPeD", "fanart": "https://image.tmdb.org/t/p/original/hnJ6mxpVVTA17E3guM7kgezYuCa.jpg"},
 "מסביב לעולם ב-50 שנה": {"thumb": "https://image.tmdb.org/t/p/original/8QDvyFWeGA91ZEJRntQmqOMs2av.jpg", "video_id": "uZ2bLJ3z", "fanart": "https://image.tmdb.org/t/p/original/wr1AWNJj7W5IcYxrRZpeFOCowSg.jpg"},
@@ -82,4 +82,11 @@
 "מטוסים": {"thumb": "https://image.tmdb.org/t/p/original/zDPYtomvAk9Kl61gjtU5rxuxoI3.jpg", "video_id": "a8ivuMwL", "fanart": "https://image.tmdb.org/t/p/original/jUe7RbnkLXGYC9MPhdN9cruy4L0.jpg"},
 "מטוסים 2: לוחמי האש": {"thumb": "https://image.tmdb.org/t/p/original/yvGOxBVEgKrk1zoySWY86C4dkvy.jpg", "video_id": "wlpP38O5", "fanart": "https://image.tmdb.org/t/p/original/3MET6hEfk8n8i0KFRq9BHnJq7ju.jpg"},
 "סינבד: אגדת שבעת הימים": {"thumb": "https://image.tmdb.org/t/p/original/4Z6xc9Eg4r5nFTrhJNd1JJ3p49y.jpg", "video_id": "mSBn5XYT", "fanart": "https://image.tmdb.org/t/p/original/2lKUGOdK88w6G80giTqlnJKDetN.jpg"}
+"החרב הקסומה": {"thumb": "https://image.tmdb.org/t/p/original/j6ekGpmNvSWkPmIpkteoTOoiBoK.jpg", "video_id": "ZHbNRkmh", "fanart": "https://image.tmdb.org/t/p/original/6wHCKBsSRzmKM0g8Y5OQSMVOygY.jpg"},
+"אבדות ומציאות": {"thumb": "https://image.tmdb.org/t/p/original/eNa351FggJbyvKlffP2LU035LWj.jpg", "video_id": "eFhhX3zU", "fanart": "https://image.tmdb.org/t/p/original/1V5c0ELABX12VnOyohfOXtseXnj.jpg"},
+"גופי הולך לקולג'": {"thumb": "https://image.tmdb.org/t/p/original/1vrKhXgjQe5fux0TeDXGcobcT6o.jpg", "video_id": "srCoP6St", "fanart": "https://image.tmdb.org/t/p/original/dWJ8B26ELBxZDc7WX2d7J4vw3Ld.jpg"},
+"כולם אוהבים את גופי": {"thumb": "https://image.tmdb.org/t/p/original/mKS9ED7hWg5yiXz0fXlEGMqpM8F.jpg", "video_id": "FtlnNchx", "fanart": "https://image.tmdb.org/t/p/original/69P1mlCW7fYzOMIhhCxmsKItwQb.jpg"},
+"הקיסר נפל על הראש": {"thumb": "https://image.tmdb.org/t/p/original/cPuMyAJUb1F4g1H1meVrFn1qwlb.jpg", "video_id": "pcbfIyjB", "fanart": "https://image.tmdb.org/t/p/original/Aczojyb0VFBNpFrxARqeCtdd2gA.jpg"},
+"חברים על הכוונת 2": {"thumb": "https://image.tmdb.org/t/p/original/wv1VCLAw5yIxZHNzIJ3tlDMFTTA.jpg", "video_id": "pPxbiGpD", "fanart": "https://image.tmdb.org/t/p/original/gPg0EjdXpxLOCXAOYPv2GvGJLgT.jpg"},
+"אי.טי. - חבר מכוכב אחר": {"thumb": "https://image.tmdb.org/t/p/original/wyMGf1QYuVMAWliAABLX8Lyxqnc.jpg", "video_id": "gpjmWRtC", "fanart": "https://image.tmdb.org/t/p/original/kAItezzEH5vtA9ZdnmKaxDj8byK.jpg"}
 }}
