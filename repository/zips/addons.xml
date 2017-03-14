@@ -1,9 +1,5 @@
 <addons>
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="plugin.video.jksp"
-       version="0.0.1"
-       name="Jk$p Movies Plugin"
-       provider-name="Jk$p">
+<addon id="plugin.video.jksp" version="0.0.2" name="Jk$p Movies Plugin" provider-name="Jk$p">
 <requires>
   <import addon="xbmc.python" version="2.24.0"/>
 </requires>
