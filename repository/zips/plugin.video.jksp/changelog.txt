@@ -1,2 +1,7 @@
+26/02/2017 - 0.0.2:
+Pyhton 2.6 compatibility 
+(for Android Box like "Minix" and other shit)
+
+
 30/01/2017 - 0.0.1:
 Initial version 
