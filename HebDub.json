@@ -93,7 +93,7 @@
 "מפלצות נגד חייזרים": {"thumb": "https://image.tmdb.org/t/p/original/2tSwGkgw7v2RZkENEHRYAwp7kwM.jpg", "video_id": "cnlAIw6a", "fanart": "https://image.tmdb.org/t/p/original/kuxddWKUJY589C1Hj5iCqVzSf7i.jpg"},
 "אחי הדוב 2": {"thumb": "https://image.tmdb.org/t/p/original/x461eRns7sSchXEc7gFXjjI0UIx.jpg", "video_id": "qzwWeDR3", "fanart": "https://image.tmdb.org/t/p/original/zhMiJmPuX2o2bbXWWZNUgVbw3OM.jpg"},
 "חברים על הכוונת להפחיד את הדוב": {"thumb": "https://image.tmdb.org/t/p/original/8mXdWWbpBBC8ZFbizEr8YZMxkJQ.jpg", "video_id": "WBst04Nl", "fanart": "https://image.tmdb.org/t/p/original/aPSHDy2q0lZvXq0j9D81aN9pXjI.jpg"},
-"שרק 2": {"thumb": "https://image.tmdb.org/t/p/original/fPGAilFy99eU3urh5ZAgI98GKaa.jpg", "video_id": "GSQG0GS0", "fanart": "https://image.tmdb.org/t/p/original/7Y4JMIhbex546Dv5M8OQTssmKiq.jpg"},
+"שרק 2": {"thumb": "https://image.tmdb.org/t/p/original/fPGAilFy99eU3urh5ZAgI98GKaa.jpg", "video_id": "FGYFO0a0", "fanart": "https://image.tmdb.org/t/p/original/7Y4JMIhbex546Dv5M8OQTssmKiq.jpg"},
 "לגו : ליגת צדק - התנגשות קוסמית": {"thumb": "https://image.tmdb.org/t/p/original/oBYcBn78CbM1doy3KF9An0soEAY.jpg", "video_id": "jV5WJuye", "fanart": "https://image.tmdb.org/t/p/original/lMfnE3RAVPd7QCANxG3vOrJERIO.jpg"},
 "כוכב המטמון": {"thumb": "https://image.tmdb.org/t/p/original/i4HjQJF0qgefUOtrhL33qBb9tVm.jpg", "video_id": "FZVajybQ", "fanart": "https://image.tmdb.org/t/p/original/a7VP1gyko8YEx7JCpyXDYnbbk7F.jpg"},
 "וול-E": {"thumb": "https://image.tmdb.org/t/p/original/5RnDsXpi3Xul87QgmB1NqxtHjQY.jpg", "video_id": "6Bhlp9Qm", "fanart": "https://image.tmdb.org/t/p/original/2nFyTvssbtJMLC6eyYwwZ88gALD.jpg"},
@@ -137,5 +137,11 @@
 "עידן הקרח 2": {"thumb": "https://image.tmdb.org/t/p/original/zjOjhozitnM88Xh9Pg9VN57heYX.jpg", "video_id": "qLiQ2YuJ", "fanart": "https://image.tmdb.org/t/p/original/dlEUrbkxnPtpRz27QzGjz2YiCxd.jpg"},
 "עידן הקרח 3": {"thumb": "https://image.tmdb.org/t/p/original/zjBATezsIbmR30OUm27yF0YW5Wg.jpg", "video_id": "feLXiCcD", "fanart": "https://image.tmdb.org/t/p/original/2ZkYXWejAwpkFkNnOY6nQYcJSPn.jpg"},
 "רטטוי": {"thumb": "https://image.tmdb.org/t/p/original/cSr1SyVchvM0Z35vcZqHLNYRqP7.jpg", "video_id": "8MbPgarW", "fanart": "https://image.tmdb.org/t/p/original/sFpGI08aeHIRKlLi9SxLyYrRyZ8.jpg"},
-"פלאנט 51": {"thumb": "https://image.tmdb.org/t/p/original/hARKfyqgE7NoNSvPMIiTJDIg8i5.jpg", "video_id": "0W9xbiPp", "fanart": "https://image.tmdb.org/t/p/original/z7z5fg7Ml1hHg67Sbk6pJmmOOT1.jpg"}
+"פלאנט 51": {"thumb": "https://image.tmdb.org/t/p/original/hARKfyqgE7NoNSvPMIiTJDIg8i5.jpg", "video_id": "0W9xbiPp", "fanart": "https://image.tmdb.org/t/p/original/z7z5fg7Ml1hHg67Sbk6pJmmOOT1.jpg"},
+"בובספוג ספוג מחוץ למים": {"thumb": "https://image.tmdb.org/t/p/original/qKp61LpqLb0we2DXDfivRdJ9ZbV.jpg", "video_id": "ZMLEc6QT", "fanart": "https://image.tmdb.org/t/p/original/1WNayre36yQ2ZBNXzXksQotoK25.jpg"},
+"שומרי האגדות": {"thumb": "https://image.tmdb.org/t/p/original/yGQmJOuWFLU4igeqKq0rq0xkva5.jpg", "video_id": "DvIrtFtp", "fanart": "https://image.tmdb.org/t/p/original/77EeYrbiLxazsJdJAiACDIwFiLj.jpg"},
+"פוקהונטס": {"thumb": "https://image.tmdb.org/t/p/original/noC3dvjyhXIVNLfu5T4clqDgHoH.jpg", "video_id": "QFYAgqm7", "fanart": "https://image.tmdb.org/t/p/original/vb9ypjVwBKnxQaCGEkduSdJv0Hx.jpg"},
+"ראלף ההורס": {"thumb": "https://image.tmdb.org/t/p/original/ujYczy6IAKSg83hCKdriuoVc2gu.jpg", "video_id": "0776dqjD", "fanart": "https://image.tmdb.org/t/p/original/1HjKgkIdR2qw8ihM6MTxgdST2kM.jpg"},
+"בובספוג מכנסמרובע": {"thumb": "https://image.tmdb.org/t/p/original/h0gjp7VfKHgEVSLLfTehP5tS40c.jpg", "video_id": "p9mi7ooI", "fanart": "https://image.tmdb.org/t/p/original/w1Jx8SFwxwMLSya3WyqPvZ0P3uH.jpg"},
+"מכוניות": {"thumb": "https://image.tmdb.org/t/p/original/ugHE2uPEMTxqom7Al5l3Clu5PW.jpg", "video_id": "8EvuRGEf", "fanart": "https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"}
 }}
