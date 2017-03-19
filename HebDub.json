@@ -97,7 +97,7 @@
 "לגו : ליגת צדק - התנגשות קוסמית": {"thumb": "https://image.tmdb.org/t/p/original/oBYcBn78CbM1doy3KF9An0soEAY.jpg", "video_id": "jV5WJuye", "fanart": "https://image.tmdb.org/t/p/original/lMfnE3RAVPd7QCANxG3vOrJERIO.jpg"},
 "כוכב המטמון": {"thumb": "https://image.tmdb.org/t/p/original/i4HjQJF0qgefUOtrhL33qBb9tVm.jpg", "video_id": "FZVajybQ", "fanart": "https://image.tmdb.org/t/p/original/a7VP1gyko8YEx7JCpyXDYnbbk7F.jpg"},
 "וול-E": {"thumb": "https://image.tmdb.org/t/p/original/5RnDsXpi3Xul87QgmB1NqxtHjQY.jpg", "video_id": "6Bhlp9Qm", "fanart": "https://image.tmdb.org/t/p/original/2nFyTvssbtJMLC6eyYwwZ88gALD.jpg"},
-"סינדרלה": {"thumb": "https://image.tmdb.org/t/p/original/5WZgMSgbTW1hi31nEdpNv3nwIby.jpg", "video_id": "j355pvR1", "fanart": "https://image.tmdb.org/t/p/original/xSN1cpugrzi8DjpVxtHeRRlbB6Q.jpg"},
+"סינדרלה": {"thumb": "https://image.tmdb.org/t/p/original/5WZgMSgbTW1hi31nEdpNv3nwIby.jpg", "video_id": "1aQ3J4sz", "fanart": "https://image.tmdb.org/t/p/original/xSN1cpugrzi8DjpVxtHeRRlbB6Q.jpg"},
 "פו הדב: סיפורו של פיל נפיל": {"thumb": "https://image.tmdb.org/t/p/original/v7TlgJeheYYaQgib75VzmhknK1l.jpg", "video_id": "faNNp70n", "fanart": "https://image.tmdb.org/t/p/original/hzQ9VVlODgIDt6m9aQM2VoMtkcj.jpg"},
 "ברבי וטירת הילומים": {"thumb": "https://image.tmdb.org/t/p/original/iMje05zvcTxdszSeCjWhg7SZX67.jpg", "video_id": "W9j0D4OA", "fanart": "https://image.tmdb.org/t/p/original/yjImlENdW0SAT5yUvxCbbFdY0Sn.jpg"},
 "פגוש את היונים": {"thumb": "https://image.tmdb.org/t/p/original/g4i8TCklAHZHgPsVnRltMnJOy5t.jpg", "video_id": "KVWi0FMh", "fanart": "https://image.tmdb.org/t/p/original/diauziwxSdmJITbuMao0YhMXqlU.jpg"},
@@ -132,7 +132,7 @@
 "עף על הקרנף": {"thumb": "https://image.tmdb.org/t/p/original/xqrLc9Uvp2SAbZ96Tf2lm36sCPE.jpg", "video_id": "H8Q7Pw5V", "fanart": "https://image.tmdb.org/t/p/original/rSWP1cOho34G8VzF5efrL2RIOdC.jpg"},
 "למעלה": {"thumb": "https://image.tmdb.org/t/p/original/tt1I6yQ7Au5bq9A32Fb1IJOFwoR.jpg", "video_id": "Hh7XGv6j", "fanart": "https://image.tmdb.org/t/p/original/qMjbMPkSCc1K19zuXNM2BgIsIRz.jpg"},
 "שלושת המוסקטרים": {"thumb": "https://image.tmdb.org/t/p/original/pZLStLaXdUj9xrwvi7UZRl08Dx8.jpg", "video_id": "kmBOkRD5", "fanart": "https://image.tmdb.org/t/p/original/8WodHELOg5guFPMIQf0M88IQhNE.jpg"},
-"לילו וסטיץ": {"thumb": "https://image.tmdb.org/t/p/original/83YfzLRspzh2GbWHMFAjrgbF6F4.jpg", "video_id": "B0Y0PUVD", "fanart": "https://image.tmdb.org/t/p/original/g4ZqTRSt95Biy4wCpiu40qYaPk7.jpg"},
+"לילו וסטיץ": {"thumb": "https://image.tmdb.org/t/p/original/83YfzLRspzh2GbWHMFAjrgbF6F4.jpg", "video_id": "TADIF2ri", "fanart": "https://image.tmdb.org/t/p/original/g4ZqTRSt95Biy4wCpiu40qYaPk7.jpg"},
 "עידן הקרח": {"thumb": "https://image.tmdb.org/t/p/original/ehBVpSJzrvNlXYAKKNVUmkdnkHP.jpg", "video_id": "hZsWVedc", "fanart": "https://image.tmdb.org/t/p/original/cTVhmoHolmeXQOdhMh38i7NnN54.jpg"},
 "עידן הקרח 2": {"thumb": "https://image.tmdb.org/t/p/original/zjOjhozitnM88Xh9Pg9VN57heYX.jpg", "video_id": "qLiQ2YuJ", "fanart": "https://image.tmdb.org/t/p/original/dlEUrbkxnPtpRz27QzGjz2YiCxd.jpg"},
 "עידן הקרח 3": {"thumb": "https://image.tmdb.org/t/p/original/zjBATezsIbmR30OUm27yF0YW5Wg.jpg", "video_id": "feLXiCcD", "fanart": "https://image.tmdb.org/t/p/original/2ZkYXWejAwpkFkNnOY6nQYcJSPn.jpg"},
@@ -143,5 +143,8 @@
 "פוקהונטס": {"thumb": "https://image.tmdb.org/t/p/original/noC3dvjyhXIVNLfu5T4clqDgHoH.jpg", "video_id": "QFYAgqm7", "fanart": "https://image.tmdb.org/t/p/original/vb9ypjVwBKnxQaCGEkduSdJv0Hx.jpg"},
 "ראלף ההורס": {"thumb": "https://image.tmdb.org/t/p/original/ujYczy6IAKSg83hCKdriuoVc2gu.jpg", "video_id": "0776dqjD", "fanart": "https://image.tmdb.org/t/p/original/1HjKgkIdR2qw8ihM6MTxgdST2kM.jpg"},
 "בובספוג מכנסמרובע": {"thumb": "https://image.tmdb.org/t/p/original/h0gjp7VfKHgEVSLLfTehP5tS40c.jpg", "video_id": "p9mi7ooI", "fanart": "https://image.tmdb.org/t/p/original/w1Jx8SFwxwMLSya3WyqPvZ0P3uH.jpg"},
-"מכוניות": {"thumb": "https://image.tmdb.org/t/p/original/ugHE2uPEMTxqom7Al5l3Clu5PW.jpg", "video_id": "8EvuRGEf", "fanart": "https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"}
+"מכוניות": {"thumb": "https://image.tmdb.org/t/p/original/ugHE2uPEMTxqom7Al5l3Clu5PW.jpg", "video_id": "hlPCTjLI", "fanart": "https://image.tmdb.org/t/p/original/a1MlbLBk5Sy6YvMbSuKfwGlDVlb.jpg"},
+"הקרודים": {"thumb": "https://image.tmdb.org/t/p/original/zBL830hXhVzRr0tllaBAkNZRy0r.jpg", "video_id": "DesLZT5r", "fanart": "https://image.tmdb.org/t/p/original/kYY4CKjjknT1GY45ZueZs556Mnl.jpg"},
+"על כלבים וגנבים": {"thumb": "https://image.tmdb.org/t/p/original/iRVtjV12D2DYKo4kth8mAJwGRdm.jpg", "video_id": "WkTTByWZ", "fanart": "https://image.tmdb.org/t/p/original/9Tn3A8bxy39xBd50wR2ppQkqFtR.jpg"},
+"משפחת סופר-על": {"thumb": "https://image.tmdb.org/t/p/original/31woMWVWNUKWMqZ0hb1XSnWqLGr.jpg", "video_id": "J0pCrvts", "fanart": "https://image.tmdb.org/t/p/original/iGknrkEyebPFmpQoLGy5L0utVxz.jpg"}
 }}
