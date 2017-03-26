@@ -1,3 +1,10 @@
+27/03/2017 - 0.0.3:
+Move "lib" into "resources"
+Editing Icon of Add-on
+Add directory "screenshots" and screenshot-01
+Editing The Code
+
+
 26/02/2017 - 0.0.2:
 Pyhton 2.6 compatibility 
 (for Android Box like "Minix" and other shit)

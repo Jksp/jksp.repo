@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addons>
-<addon id="plugin.video.jksp" version="0.0.2" name="Jk$p Movies Plugin" provider-name="Jk$p">
+<addon id="plugin.video.jksp"
+       version="0.0.3"
+       name="Jk$p Movies Plugin"
+       provider-name="Jk$p">
 <requires>
   <import addon="xbmc.python" version="2.24.0"/>
 </requires>
@@ -14,6 +16,7 @@
   <assets>
     <icon>icon.png</icon>
     <fanart>fanart.jpg</fanart>
+	<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
   </assets>
 </extension>
 </addon>
