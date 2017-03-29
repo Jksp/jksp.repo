@@ -1,3 +1,6 @@
+29/03/2017 - 0.0.4:
+update the resolver
+
 27/03/2017 - 0.0.3:
 Move "lib" into "resources"
 Editing Icon of Add-on
