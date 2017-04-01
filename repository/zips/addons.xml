@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon id="plugin.video.jksp"
-       version="0.0.5"
+       version="0.0.6"
        name="Jk$p Movies Plugin"
        provider-name="Jk$p">
 <requires>
