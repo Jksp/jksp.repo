@@ -1,3 +1,6 @@
+03/04/2017 - 0.0.7:
+Fix resolver issues with kodi RC
+
 02/04/2017 - 0.0.6:
 improve speed for kodi 17
 
