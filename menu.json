@@ -1,2 +1,6 @@
 {"categories":
-  {"סרטים אנימצה מדובבים": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/HebDub.json", "fanart": "https://github.com/Jksp/jksp.repo/raw/master/resources/fanart.jpg", "thumb": "https://github.com/Jksp/jksp.repo/blob/master/resources/icon.png?raw=true"}}}
+  {
+    "Movies dubbed (Hebrew)-(סרטים מדובבים (עברית": {"url": "https://raw.githubusercontent.com/SomeOneDudOrg/SomeOneDudOrgKodiRepo/master/HebDub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.thumb.png"},
+    "סרטים עם תרגום מובנה - Movies with Subtitles": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/EngSub", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.thumb.png"}
+  }
+}
