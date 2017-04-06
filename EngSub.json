@@ -1,4 +1,8 @@
 {"movies":{
-"המייסד": {"thumb": "https://globusmax.co.il/images/The%20Founder2.jpg", "video_id": "TOXTieIK", "fanart": "https://image.tmdb.org/t/p/original/7GEFGAFY1uaqytYrVtvVrclQrAF.jpg"},
-"התגלית": {"thumb": "https://image.tmdb.org/t/p/original/nLIDouFvreSrs8xK62zuvpEPDw0.jpg", "video_id": "WID5JLdi", "fanart": "https://image.tmdb.org/t/p/original/jE0SDVtlCCOFfi2djrDlRQlCDl.jpg"}
+  "המייסד": {"thumb": "https://globusmax.co.il/images/The%20Founder2.jpg", "video_id": "TOXTieIK", "fanart": "https://image.tmdb.org/t/p/original/7GEFGAFY1uaqytYrVtvVrclQrAF.jpg"},
+  "התגלית": {"thumb": "https://image.tmdb.org/t/p/original/nLIDouFvreSrs8xK62zuvpEPDw0.jpg", "video_id": "WID5JLdi", "fanart": "https://image.tmdb.org/t/p/original/jE0SDVtlCCOFfi2djrDlRQlCDl.jpg"},
+  "לשיר": {"thumb": "https://image.tmdb.org/t/p/original/puDyg20K7zEOxqRNvDjHpwta26N.jpg", "video_id": "nLmrYYFF", "fanart": "https://image.tmdb.org/t/p/original/usJKCEMXV3tECgIJj8ZTEndmY2E.jpg"},
+  "למה דווקא הוא?": {"thumb": "https://image.tmdb.org/t/p/original/tCOaTaBqpS0STBbVU2Jlx7seYl5.jpg", "video_id": "ONGhKKWi", "fanart": "https://image.tmdb.org/t/p/original/yYL6JJuSxCBtrp9EXGda37A2D6m.jpg"},
+  "הגיבורים של בוסטון": {"thumb": "https://image.tmdb.org/t/p/original/43Xp6vWusR4Pj1ZaROT8tnC6XTu.jpg", "video_id": "201HUBtt", "fanart": "https://image.tmdb.org/t/p/original/tiBL4PeaCPKGBz3qO4dJP2KzKop.jpg"},
+  "מואנה": {"thumb": "https://image.tmdb.org/t/p/original/cxATYyYZA8hxG1omnInZwaK1vMW.jpg", "video_id": "pgHuMfKe", "fanart": "https://image.tmdb.org/t/p/original/g6EFJmGHbyQjgGK58FZ6FdvvSEy.jpg"}
 }}
