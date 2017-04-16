@@ -3,29 +3,46 @@ import os
 import re
 import sys
 import urllib2
+import urlparse
 
-import xbmc
+USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0"
 
+try:
+    import xbmc
+    KODI_VERSION = int(xbmc.getInfoLabel("System.BuildVersion").split('.', 1)[0])
+except ImportError:
+    KODI_VERSION = 17
 
-def resolve(video_id):
+def fetch_url(url, headers={}):
+    hdr = {'User-Agent': USER_AGENT}
+    hdr.update(headers)
 
-    kodi_version = int(xbmc.getInfoLabel("System.BuildVersion").split('.', 1)[0])
-
-    if kodi_version < 17:
-        url = "http://jksp.webutu.com/resolver.for.kodi.16.1/getLINK.php?link=https://www.raptu.com/?v=%s" % video_id
-
-    else:
-        url = "https://www.raptu.com/?v=%s" % video_id
+    if KODI_VERSION < 17:
+        url = "http://jksp.webutu.com/resolver.for.kodi.16.1/getLINK.php?link=%s" % url
 
     try:
-        req = urllib2.Request(url, headers={'User-Agent': "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:52.0) Gecko/20100101 Firefox/52.0"})
-        html = urllib2.urlopen(req).read()
+        req = urllib2.Request(url, headers={'User-Agent': USER_AGENT})
+        return urllib2.urlopen(req).read()
 
     except urllib2.URLError, e:
         xbmc.log ("JKSP[%s]: %s" %(os.path.basename(__file__), str(e)), level=xbmc.LOGERROR)
         return False
 
-    r = re.search('jwplayer\("home_video"\)\.setup\(.+?"sources": (\[.+?\]).+?\);', html)
+
+def resolve(video_id):
+    main_url = "https://www.raptu.com/?v=%s" % video_id
+    main_html = fetch_url(main_url)
+    if main_html is False:
+        return False
+
+    r = re.search(r'playerInstance\.on\(\'play\', function\(\) \{ \$\.get\( "(.+?)"\+canRunAds\);', main_html)
+    if r is None:
+        return False
+
+    fetch_url(urlparse.urljoin("https://www.raptu.com", r.group(1) + "true"),
+        headers={'X-Requested-With':"XMLHttpRequest", 'Referer': main_url})
+
+    r = re.search(r'jwplayer\("home_video"\)\.setup\(.+?"sources": (\[.+?\]).+?\);', main_html)
     if r:
         video_sources = r.group(1)
         json_data = json.loads(video_sources)

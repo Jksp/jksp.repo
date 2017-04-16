@@ -1,3 +1,6 @@
+16/04/2017 - 0.0.8:
+update the resolver
+
 03/04/2017 - 0.0.7:
 Fix resolver issues with kodi RC
 
