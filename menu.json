@@ -1,6 +1,6 @@
 {"categories":
   {
-    "Movies dubbed (Hebrew)-(סרטים מדובבים (עברית": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/HebDub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.thumb.png"},
+    "Movies dubbed (Hebrew)-(סרטים מדובבים (עברית": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/HebDub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.fanart.jpg", "thumb": "https://github.com/Jksp/jksp.repo/blob/master/resources/kids.thumb.2.png?raw=true"},
     "סרטים עם תרגום מובנה - Movies with Subtitles": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/EngSub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.thumb.png"},
     "Live Shows - הופעות חיות": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/LiveShows.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Live.Shows.Fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Live.Shows.png"}
   }
