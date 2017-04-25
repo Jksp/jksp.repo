@@ -61,7 +61,6 @@ def list_categories():
     for category in categories:
         list_item = xbmcgui.ListItem(label=category)
         list_item.setArt({'thumb': CATEGORIES["categories"][category]['thumb'],
-                          # 'icon': VIDEOS["categories"][category][0]['thumb'],
                           'fanart': CATEGORIES["categories"][category]['fanart']})
         list_item.setInfo('video', {'title': category, 'genre': category})
         url = get_url(action='listing', category=category.encode("UTF8"))
@@ -78,7 +77,7 @@ def list_videos(category):
     for video in videos.iteritems():
         list_item = xbmcgui.ListItem(label=video[0].encode("UTF8"))
         list_item.setInfo('video', {'title': video[0].encode("UTF8"),})
-        list_item.setArt({'thumb': video[1]['thumb'], 'fanart': video[1]['fanart']})
+        list_item.setArt({'thumb': video[1]['thumb'], 'fanart': video[1]['fanart'], 'icon': video[1]['thumb'], 'poster': video[1]['thumb']})
         url = get_url(action='quality', video=video[1]['video_id'])
         is_folder = True
         xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
