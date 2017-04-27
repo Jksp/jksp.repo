@@ -1,0 +1,36 @@
+27/04/2017 - 0.0.11:
+Reorganise repo structure
+
+20/04/2017 - 0.0.10:
+update the resolver
+
+19/04/2017 - 0.0.9:
+update the resolver
+
+16/04/2017 - 0.0.8:
+update the resolver
+
+03/04/2017 - 0.0.7:
+Fix resolver issues with kodi RC
+
+02/04/2017 - 0.0.6:
+improve speed for kodi 17
+
+01/04/2017 - 0.0.5:
+fixing problem for Kodi 16.1 users
+
+29/03/2017 - 0.0.4:
+update the resolver
+
+27/03/2017 - 0.0.3:
+Move "lib" into "resources"
+Editing Icon of Add-on
+Add directory "screenshots" and screenshot-01
+Editing The Code
+
+26/02/2017 - 0.0.2:
+Pyhton 2.6 compatibility 
+(for Android Box like "Minix" and other shit)
+
+30/01/2017 - 0.0.1:
+Initial version 

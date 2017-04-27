@@ -1,0 +1,7 @@
+{"categories":
+  {
+    "Movies dubbed (Hebrew)-(סרטים מדובבים (עברית": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/db/HebDub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/kids.thumb.2.png"},
+    "סרטים עם תרגום מובנה - Movies with Subtitles": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/db/EngSub.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Movies.with.Subtitles.thumb.png"},
+    "Live Shows - הופעות חיות": {"url": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/db/LiveShows.json", "fanart": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Live.Shows.Fanart.jpg", "thumb": "https://raw.githubusercontent.com/Jksp/jksp.repo/master/resources/Live.Shows.png"}
+  }
+}

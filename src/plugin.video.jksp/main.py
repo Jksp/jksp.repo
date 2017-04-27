@@ -31,7 +31,7 @@ def get_url(**kwargs):
 
 def load_categories():
     try:
-        f = urllib2.urlopen('https://raw.githubusercontent.com/Jksp/jksp.repo/master/menu.json')
+        f = urllib2.urlopen('https://raw.githubusercontent.com/Jksp/jksp.repo/master/db/menu.json')
 
     except urllib2.URLError, e:
         xbmc.log ("JKSP[%s]: %s" %(os.path.basename(__file__), str(e)), level=xbmc.LOGERROR)
