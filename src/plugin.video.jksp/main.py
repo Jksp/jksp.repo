@@ -7,20 +7,24 @@
 import sys
 import os
 import urllib2
-from urllib import urlencode
-from urlparse import parse_qsl
+
+import xbmc
 import xbmcgui
 import xbmcplugin
 import xbmcaddon
 import json
 
+from urllib import urlencode
+from urlparse import parse_qsl
+
 _url = sys.argv[0]
 _handle = int(sys.argv[1])
 settings = xbmcaddon.Addon(id='plugin.video.jksp')
 sys.path = [os.path.join(settings.getAddonInfo('path'), "resources", "lib", "resolver")] + sys.path
+
 from raptu import resolve
 
-
+KODI_VERSION = int(xbmc.getInfoLabel("System.BuildVersion").split('.', 1)[0])
 CATEGORIES = None
 VIDEOS = {"categories": {}}
 
@@ -76,12 +80,23 @@ def list_videos(category):
 
     for video in videos.iteritems():
         list_item = xbmcgui.ListItem(label=video[0].encode("UTF8"))
-        list_item.setInfo('video', {'title': video[0].encode("UTF8"),})
+        list_item.setInfo('video', {'title': video[0].encode("UTF8")})
         list_item.setArt({'thumb': video[1]['thumb'], 'fanart': video[1]['fanart'], 'icon': video[1]['thumb'], 'poster': video[1]['thumb']})
+        list_item.addStreamInfo('video', video[1]['stream_info'])
+        video_info = video[1]['video_info']
+        if 'trailer' in video_info:
+            video_info['trailer'] = "plugin://plugin.video.youtube?&action=play_video&videoid=%s" % video_info['trailer']
+        list_item.setInfo('video', video_info)
+        if KODI_VERSION >= 17:
+            list_item.setCast(video[1]['actors'])
+        else:
+            list_item.setInfo('video', {'castandrole': [(_a['name'], _a.get('role', "")) for _a in video[1]['actors']]})
         url = get_url(action='quality', video=video[1]['video_id'])
         is_folder = True
         xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
+    xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_DATEADDED)
+    xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_VIDEO_YEAR)
     xbmcplugin.endOfDirectory(_handle)
 
 def list_qualities(video):

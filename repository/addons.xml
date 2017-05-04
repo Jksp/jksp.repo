@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon id="plugin.video.jksp"
-       version="0.0.11"
+       version="0.0.12"
        name="[B][COLOR white]J[/COLOR][COLOR deepskyblue]k[/COLOR][COLOR green]$[/COLOR][COLOR red]p[/COLOR][/B] Movies Plugin"
        provider-name="Jk$p">
 <requires>
-  <import addon="xbmc.python" version="2.24.0"/>
+  <import addon="xbmc.python" version="2.1.0"/>
+  <import addon="plugin.video.youtube" version="4.4.10"/>
 </requires>
 <extension point="xbmc.python.pluginsource" library="main.py">
   <provides>video</provides>
