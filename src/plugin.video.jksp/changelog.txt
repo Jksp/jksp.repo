@@ -1,4 +1,4 @@
-XX/XX/XXXX - 0.0.12:
+04/05/2017 - 0.0.12:
 Support kodi 14 !!
 Information for movies (plot, trailer, rating)
 Cast & Crew with pictures !! (for Kodi 17)
