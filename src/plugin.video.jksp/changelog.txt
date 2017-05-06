@@ -1,3 +1,6 @@
+07/05/2017 - 0.0.13:
+Fix Information of Movies for Android Box
+
 04/05/2017 - 0.0.12:
 Support kodi 14 !!
 Information for movies (plot, trailer, rating)

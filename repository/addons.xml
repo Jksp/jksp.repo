@@ -1,26 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
 <addon id="plugin.video.jksp"
-       version="0.0.12"
        name="[B][COLOR white]J[/COLOR][COLOR deepskyblue]k[/COLOR][COLOR green]$[/COLOR][COLOR red]p[/COLOR][/B] Movies Plugin"
+       version="0.0.13"
        provider-name="Jk$p">
-<requires>
-  <import addon="xbmc.python" version="2.1.0"/>
-  <import addon="plugin.video.youtube" version="4.4.10"/>
-</requires>
-<extension point="xbmc.python.pluginsource" library="main.py">
-  <provides>video</provides>
-</extension>
-<extension point="xbmc.addon.metadata">
-  <summary lang="en">Jk$p Movies Plugin</summary>
-  <description lang="en">Watch movies by Jk$p</description>
-  <disclaimer> </disclaimer>
-  <assets>
-    <icon>icon.png</icon>
-    <fanart>fanart.jpg</fanart>
-	<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
-  </assets>
-</extension>
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+    <import addon="plugin.video.youtube" version="4.4.10" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="main.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Jk$p Movies Plugin</summary>
+    <description lang="en">Watch movies by Jk$p</description>
+    <disclaimer> </disclaimer>
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+      <screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    </assets>
+  </extension>
+  <extension point="xbmc.addon.repository" name="[B][COLOR white]J[/COLOR][COLOR deepskyblue]k[/COLOR][COLOR green]$[/COLOR][COLOR red]p[/COLOR][/B] repository">
+    <info compressed="false">https://raw.githubusercontent.com/Jksp/jksp.repo/master/repository/addons.xml</info>
+    <checksum>https://raw.githubusercontent.com/Jksp/jksp.repo/master/repository/addons.xml.md5</checksum>
+    <datadir zip="true">https://raw.githubusercontent.com/Jksp/jksp.repo/master/repository/zips</datadir>
+  </extension>
 </addon>
 
 <addon id="repository.Jk$p"

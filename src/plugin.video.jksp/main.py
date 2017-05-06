@@ -91,6 +91,7 @@ def list_videos(category):
             list_item.setCast(video[1]['actors'])
         else:
             list_item.setInfo('video', {'castandrole': [(_a['name'], _a.get('role', "")) for _a in video[1]['actors']]})
+        list_item.addContextMenuItems([(xbmc.getLocalizedString(33029).encode('utf-8'), 'Action(Info)')], replaceItems=True)
         url = get_url(action='quality', video=video[1]['video_id'])
         is_folder = True
         xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
