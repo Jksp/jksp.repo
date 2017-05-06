@@ -197,6 +197,11 @@ def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
     log("TMDB query finished successfully.")
 
     title =  response['title']
+
+    if title in db['movies'] and db['movies'][title]['video_id'] != raptu_movie_id:
+        print("Error: Another movie with the same name already exist, cannot add!")
+        return None
+
     trailers = dict((v['iso_639_1'], v['key']) for v in  response['videos']['results']
                     if v['site'] == "YouTube" and v['type'] == "Trailer")
     trailer = youtube_trailer_id or trailers.get('he', None) or tmdb_get_trailer(tmdb_movie_id, "en").get('en', None)
@@ -225,22 +230,21 @@ def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
     imdb_info = None
     imdb_id = response.get('imdb_id', "")
     if imdb_id:
-        log("Quering IMDB for rating, votes and duration")
+        log("Quering IMDB for rating, votes and duration of `%s`" % imdb_id)
         imdb_info = imdb_get_info(imdb_id)
         if imdb_info:
-            rating = imdb_info['rating']
-            votes = imdb_info['votes']
             log("IMDB query finished.")
 
         else:
-            rating = round(response.get('vote_average', 0), 1)
-            votes = response.get('vote_count', 0)
             print("IMDB query failed, defaulting to TMDB rating and votes")
 
     else:
         print("Warning: TMDB movie '%s' had no IMDB id!" % tmdb_movie_id)
 
-    duration = (imdb_info['duration'] if imdb_info and 'duration' in imdb_info else response.get('runtime', 0)) * 60
+    rating = imdb_info['rating'] if imdb_info and 'rating' in imdb_info else round(response.get('vote_average', 0), 1)
+    votes = imdb_info['votes'] if imdb_info and 'votes' in imdb_info else response.get('vote_count', 0)
+    duration = (imdb_info['duration'] if imdb_info and 'duration' in imdb_info else response.get('runtime', 0) or 0) * 60
+
     if response['production_countries']:
         country = response['production_countries'][0]["name"]
     else:
