@@ -98,6 +98,7 @@ def list_videos(category):
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_DATEADDED)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_VIDEO_YEAR)
+    xbmcplugin.setContent(_handle, content="movies" )
     xbmcplugin.endOfDirectory(_handle)
 
 def list_qualities(video):
