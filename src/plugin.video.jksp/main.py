@@ -80,7 +80,7 @@ def list_videos(category):
 
     for video in videos.iteritems():
         list_item = xbmcgui.ListItem(label=video[0].encode("UTF8"))
-        list_item.setInfo('video', {'title': video[0].encode("UTF8")})
+        list_item.setInfo('video', {'title': video[0].encode("UTF8"), 'mediatype': "movie"})
         list_item.setArt({'thumb': video[1]['thumb'], 'fanart': video[1]['fanart'], 'icon': video[1]['thumb'], 'poster': video[1]['thumb']})
         list_item.addStreamInfo('video', video[1]['stream_info'])
         video_info = video[1]['video_info']
@@ -91,14 +91,14 @@ def list_videos(category):
             list_item.setCast(video[1]['actors'])
         else:
             list_item.setInfo('video', {'castandrole': [(_a['name'], _a.get('role', "")) for _a in video[1]['actors']]})
-        list_item.addContextMenuItems([(xbmc.getLocalizedString(33029).encode('utf-8'), 'Action(Info)')], replaceItems=True)
+        #list_item.addContextMenuItems([(xbmc.getLocalizedString(33029).encode('utf-8'), 'Action(Info)')], replaceItems=True)
         url = get_url(action='quality', video=video[1]['video_id'])
         is_folder = True
         xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_DATEADDED)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_VIDEO_YEAR)
-    xbmcplugin.setContent(_handle, content="movies" )
+    xbmcplugin.setContent(_handle, "movies")
     xbmcplugin.endOfDirectory(_handle)
 
 def list_qualities(video):
