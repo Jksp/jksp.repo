@@ -137,11 +137,11 @@ def _http_send_request(url, headers={}):
     except urllib2.HTTPError as err:
         return err.code
 
-def raptu_get_info(raptu_movie_id):
-    response = _http_send_request("https://www.raptu.com/?v=%s" % raptu_movie_id)
+def rapidvideo_get_info(rapidvideo_movie_id):
+    response = _http_send_request("https://www.rapidvideo.com/?v=%s" % rapidvideo_movie_id)
     if isinstance(response, int):
         if response == 404:
-            print("RAPTU Error: Movie '%s' not found." % raptu_movie_id)
+            print("rapidvideo Error: Movie '%s' not found." % rapidvideo_movie_id)
         else:
             print("TMDB Error: Unknown error (%s)." % response)
         return None
@@ -188,7 +188,7 @@ def imdb_get_info(imdb_movie_id):
     return result
 
 
-def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
+def add_movie(tmdb_movie_id, rapidvideo_movie_id, db, youtube_trailer_id=None):
     log("Quering TMDB for movie '%s'." % tmdb_movie_id)
     response = tmdb_movie_info(tmdb_movie_id)
     if not  response:
@@ -198,7 +198,7 @@ def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
 
     title =  response['title']
 
-    if title in db['movies'] and db['movies'][title]['video_id'] != raptu_movie_id:
+    if title in db['movies'] and db['movies'][title]['video_id'] != rapidvideo_movie_id:
         print("Error: Another movie with the same name already exist, cannot add!")
         return None
 
@@ -270,13 +270,13 @@ def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
                   'trailer'      : trailer}
     video_info = dict((k, v) for (k, v) in video_info.iteritems() if v)
 
-    log("Quering Raptu for stream info of movie '%s'." % raptu_movie_id)
-    stream_info = raptu_get_info(raptu_movie_id)
+    log("Quering rapidvideo for stream info of movie '%s'." % rapidvideo_movie_id)
+    stream_info = rapidvideo_get_info(rapidvideo_movie_id)
     if stream_info is None:
         return
-    log("Raptu query finished.")
+    log("rapidvideo query finished.")
 
-    movie = {'video_id'     : raptu_movie_id,
+    movie = {'video_id'     : rapidvideo_movie_id,
              'thumb'        : "https://image.tmdb.org/t/p/original/%s" % response.get('poster_path'),
              'fanart'       : "https://image.tmdb.org/t/p/original/%s" % response.get('backdrop_path'),
              'video_info'   : video_info,
@@ -290,7 +290,7 @@ def add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id=None):
 
 def usage():
     print("")
-    print("Usage: %s [OPTION]... <db_file.json> <raptu_movie_id> <movie_id>" % os.path.basename(sys.argv[0]))
+    print("Usage: %s [OPTION]... <db_file.json> <rapidvideo_movie_id> <movie_id>" % os.path.basename(sys.argv[0]))
     print("")
     print("Options:")
     print("  -h,  --help                 print this help")
@@ -335,7 +335,7 @@ if __name__ == '__main__':
         sys.exit(2)
 
     db_file = args[0]
-    raptu_movie_id = args[1]
+    rapidvideo_movie_id = args[1]
     movie_id = args[2]
     out_file = out_file or db_file
 
@@ -365,7 +365,7 @@ if __name__ == '__main__':
         sys.exit(2)
 
     print("Adding %s" % movie_id)
-    if add_movie(tmdb_movie_id, raptu_movie_id, db, youtube_trailer_id):
+    if add_movie(tmdb_movie_id, rapidvideo_movie_id, db, youtube_trailer_id):
         log("Saving DB to '%s'." % out_file)
         with open(out_file, "wb") as f:
             f.write(json.dumps(db, ensure_ascii=False, indent=pretty).encode('utf8'))

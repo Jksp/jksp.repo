@@ -42,7 +42,7 @@ def fetch_url(url, headers={}, direct=False, size=None):
 
 
 def resolve(video_id):
-    main_url = "https://www.raptu.com/?v=%s" % video_id
+    main_url = "https://www.rapidvideo.com/?v=%s" % video_id
 
     main_html = fetch_url(main_url)
     if main_html is False:
@@ -54,7 +54,7 @@ def resolve(video_id):
         log_error("Player URL not found")
         return False
 
-    player_url = urlparse.urljoin("https://www.raptu.com", r.group(1) + "true")
+    player_url = urlparse.urljoin("https://www.rapidvideo.com", r.group(1) + "true")
     print player_url
 
     r = re.search(r'jwplayer\("home_video"\)\.setup\(.+?"sources": (\[.+?\]).+?\);', main_html)
