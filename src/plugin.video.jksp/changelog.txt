@@ -1,3 +1,6 @@
+13/07/2017 - 0.0.16
+fix for watched movies
+
 02/08/2017 - 0.0.15
 Back to work for Kodi 17 and up
 next update i will fix it for kodi 16 and down

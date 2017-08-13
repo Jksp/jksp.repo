@@ -92,8 +92,9 @@ def list_videos(category):
         else:
             list_item.setInfo('video', {'castandrole': [(_a['name'], _a.get('role', "")) for _a in video[1]['actors']]})
         #list_item.addContextMenuItems([(xbmc.getLocalizedString(33029).encode('utf-8'), 'Action(Info)')], replaceItems=True)
-        url = get_url(action='quality', video=video[1]['video_id'])
-        is_folder = True
+        list_item.setProperty('IsPlayable', 'true')
+        url = get_url(action='play', video=video[1]['video_id'])
+        is_folder = False
         xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_DATEADDED)
@@ -114,9 +115,15 @@ def list_qualities(video):
     xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
     xbmcplugin.endOfDirectory(_handle)
 
-def play_video(url):
-    play_item = xbmcgui.ListItem(path=url)
-    xbmcplugin.setResolvedUrl(_handle, True, listitem=play_item)
+def play_video(video):
+    videos = resolve(video)
+    qualities = [_x.encode("UTF8") for _x in videos.keys()]
+    dialog = xbmcgui.Dialog()
+
+    ret = dialog.select("Choose quality to play", qualities)
+    if ret:
+        play_item = xbmcgui.ListItem(path=videos[qualities[ret]])
+        xbmcplugin.setResolvedUrl(_handle, True, listitem=play_item)
 
 
 def router(paramstring):
@@ -131,11 +138,8 @@ def router(paramstring):
         if params['action'] == 'listing':
             list_videos(params['category'])
 
-        elif params['action'] == 'quality':
-            list_qualities(params['video'])
-
         elif params['action'] == 'play':
-            play_video(params['url'])
+            play_video(params['video'])
 
         else:
 
