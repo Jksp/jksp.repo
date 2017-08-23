@@ -32,13 +32,15 @@ VIDEOS = {"categories": {}}
 def get_url(**kwargs):
     return '{0}?{1}'.format(_url, urlencode(kwargs))
 
+def log(msg, level=xbmc.LOGERROR):
+    xbmc.log ("JKSP[%s]: %s" %(os.path.basename(__file__), msg), level=level)
 
 def load_categories():
     try:
         f = urllib2.urlopen('https://raw.githubusercontent.com/Jksp/jksp.repo/master/db/menu.json')
 
     except urllib2.URLError, e:
-        xbmc.log ("JKSP[%s]: %s" %(os.path.basename(__file__), str(e)), level=xbmc.LOGERROR)
+        log(str(e))
         return []
 
     return json.loads(f.read())
@@ -49,7 +51,7 @@ def load_movies(category):
         f = urllib2.urlopen(CATEGORIES['categories'][category.decode("UTF8")]['url'])
 
     except urllib2.URLError, e:
-        xbmc.log ("JKSP[%s]: %s" %(os.path.basename(__file__), str(e)), level=xbmc.LOGERROR)
+        log(str(e))
         return []
 
     return json.loads(f.read())['movies']
@@ -102,28 +104,39 @@ def list_videos(category):
     xbmcplugin.setContent(_handle, "movies")
     xbmcplugin.endOfDirectory(_handle)
 
-def list_qualities(video):
-    qualities = resolve(video)
-
-    for quality in qualities.iteritems():
-        list_item = xbmcgui.ListItem(label=quality[0].encode("UTF8"))
-        list_item.setInfo('video', {'title': quality[0].encode("UTF8"), })
-        list_item.setProperty('IsPlayable', 'true')
-        url = get_url(action='play', url=quality[1])
-        is_folder = False
-        xbmcplugin.addDirectoryItem(_handle, url, list_item, is_folder)
-    xbmcplugin.addSortMethod(_handle, xbmcplugin.SORT_METHOD_LABEL_IGNORE_THE)
-    xbmcplugin.endOfDirectory(_handle)
-
 def play_video(video):
-    videos = resolve(video)
-    qualities = [_x.encode("UTF8") for _x in videos.keys()]
+    video_data = resolve(video)
+
+    videos = video_data['videos']
+    subs = video_data['subs']
+
+    qualities = sorted([_x.encode("UTF8") for _x in videos.keys()], key=lambda _q: int(filter(str.isdigit, _q)))
     dialog = xbmcgui.Dialog()
 
     ret = dialog.select("Choose quality to play", qualities)
-    if ret:
+    if ret != -1:
+        video_url = videos[qualities[ret]]
+
         play_item = xbmcgui.ListItem(path=videos[qualities[ret]])
         xbmcplugin.setResolvedUrl(_handle, True, listitem=play_item)
+
+        if subs:        
+            player = xbmc.Player()
+
+            for _i in xrange(10):
+                if player.isPlaying():
+                    player.setSubtitles(subs.values()[0])
+                    break
+
+                elif xbmc.abortRequested:
+                    break
+
+                xbmc.sleep(1000)
+
+            else:
+                log("Wait for play timeout")
+
+            del player
 
 
 def router(paramstring):

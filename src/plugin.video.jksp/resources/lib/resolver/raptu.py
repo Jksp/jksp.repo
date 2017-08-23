@@ -47,26 +47,22 @@ def resolve(video_id):
     main_html = fetch_url(main_url)
     if main_html is False:
         log_error("Failed to load main URL")
-        return False
+        return None
 
-    r = re.search(r'\$\.getJSON\("(.+?)"\+canRunAds', main_html)
-    if r is None:
-        log_error("Player URL not found")
-        return False
-
-    player_url = urlparse.urljoin("https://www.rapidvideo.com", r.group(1) + "true")
-    print player_url
-
-    r = re.search(r'jwplayer\("home_video"\)\.setup\(.+?"sources": (\[.+?\]).+?\);', main_html)
+    r = re.search(r'jwplayer\("home_video"\)\.setup\((?:.+?tracks: (.+?), )"sources": (\[.+?\]).+?\);', main_html)
     if r:
-        video_sources = r.group(1)
-        json_data = json.loads(video_sources)
-        videos = [(x['label'], x['file']) for x in json_data if 'label' in x]
+        sources = json.loads(r.group(2))
+        videos = dict([(x['label'], x['file'])
+                       for x in sources
+                       if 'label' in x])
+        
+        tracks = json.loads(r.group(1))
+        subs = dict([(x['label'], urlparse.urljoin("https://www.rapidvideo.com/", x['file']))
+                     for x in tracks if
+                     x.get("kind") == "captions"])
 
-        #        fetch_url(videos[0][1], direct=True, size=1* 1024 * 1024)
-        #        print fetch_url(player_url, headers={'X-Requested-With': "XMLHttpRequest", 'Referer': main_url})
-
-        return dict(videos)
+        return {'videos': videos,
+                'subs': subs}
 
     else:
         log_error("Video URL not found")
@@ -76,8 +72,13 @@ def resolve(video_id):
 if __name__ == '__main__':
     movie_data = resolve(sys.argv[1])
     if movie_data:
-        for x in movie_data:
-            print movie_data[x], x
+        videos = movie_data['videos']
+        for x in videos:
+            print videos[x], x
+
+        subs = movie_data['subs']
+        for x in subs:
+            print subs[x], x
 
     else:
         print("failed!")
