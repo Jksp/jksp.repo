@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="plugin.video.jksp"
        name="[B][COLOR white]J[/COLOR][COLOR deepskyblue]k[/COLOR][COLOR green]$[/COLOR][COLOR red]p[/COLOR][/B] Movies Plugin"
-       version="0.0.17"
+       version="0.0.18"
        provider-name="Jk$p">
   <requires>
     <import addon="xbmc.python" version="2.1.0" />

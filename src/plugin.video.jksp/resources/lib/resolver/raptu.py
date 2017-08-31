@@ -41,32 +41,37 @@ def fetch_url(url, headers={}, direct=False, size=None):
         return False
 
 
+def resolve_video(url):
+    html = fetch_url(url)
+    r = re.search(r'<source src="(.+?)" type="video/mp4"', html)
+    if r:
+        return r.group(1)
+
+    else:
+        return None
+
 def resolve(video_id):
-    main_url = "https://www.rapidvideo.com/?v=%s" % video_id
+    main_url = "https://www.rapidvideo.com/v/%s" % video_id
 
     main_html = fetch_url(main_url)
     if main_html is False:
         log_error("Failed to load main URL")
         return None
 
-    r = re.search(r'jwplayer\("home_video"\)\.setup\((?:.+?tracks: (.+?), )"sources": (\[.+?\]).+?\);', main_html)
-    if r:
-        sources = json.loads(r.group(2))
-        videos = dict([(x['label'], x['file'])
-                       for x in sources
-                       if 'label' in x])
-        
-        tracks = json.loads(r.group(1))
-        subs = dict([(x['label'], urlparse.urljoin("https://www.rapidvideo.com/", x['file']))
-                     for x in tracks if
-                     x.get("kind") == "captions"])
+    qualities = re.findall(r'<a href="%s&q=(.+?)">' % main_url, main_html)
+    videos = {}
+    for quality in qualities:
+        video = resolve_video(main_url + "&q=" + quality)
+        if video:
+            videos[quality] = video
 
-        return {'videos': videos,
-                'subs': subs}
+    subs = {}
+    s = re.finditer(r'<track src="<(/loadvtt\.php\?f=/srt/.+?)" kind="subtitles" .*label="(.+?)"', main_html)
+    for r in re.finditer(r'<track src="(?P<U>/loadvtt\.php\?f=/srt/.+?)" kind="subtitles" .*label="(?P<L>.+?)"', main_html):
+        subs[r.group(2)] = "https://www.rapidvideo.com" + r.group(1)
 
-    else:
-        log_error("Video URL not found")
-        return None
+    return {'videos': videos,
+            'subs': subs}
 
 
 if __name__ == '__main__':
