@@ -1,3 +1,6 @@
+11/10/2017 - 0.0.19
+Update the resolver
+
 01/09/2017 - 0.0.18
 Update resolver
 

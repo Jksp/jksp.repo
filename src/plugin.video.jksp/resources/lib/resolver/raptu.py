@@ -23,9 +23,13 @@ def log_error(message):
     else:
         print("JKSP[%s]: %s" % (os.path.basename(__file__), message))
 
-
 def fetch_url(url, headers={}, direct=False, size=None):
-    hdr = {'User-Agent': USER_AGENT}
+    hdr={
+        'Accept': "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        'Accept-Language': "en-US,en;q=0.5",
+        'Referer': url,
+        'User-Agent': USER_AGENT
+    }
     hdr.update(headers)
 
     if KODI_VERSION < 17 and direct is False:
